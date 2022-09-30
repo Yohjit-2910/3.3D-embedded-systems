@@ -35,7 +35,6 @@ char pass[] = "1234567890";    // your network password (use for WPA, or use as 
 #define ULTRASONIC_TRIG_PIN 10 // pin trig is D11
 #define ULTRASONIC_ECHO_PIN 9
 
-
 long duration; // variable for the duration of sound wave travel
 int distance;
 
