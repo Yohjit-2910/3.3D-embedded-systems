@@ -26,6 +26,8 @@
 char ssid[] = "OnePlus 6T";    // your network SSID (name)
 char pass[] = "1234567890";    // your network password (use for WPA, or use as key for WEP)
 
+#define LED 5
+
 // To connect with SSL/TLS:
 // 1) Change WiFiClient to WiFiSSLClient.
 // 2) Change port value from 1883 to 8883.
@@ -44,7 +46,7 @@ const char topic[]  = "arduino/simple";
 void setup() {
   //Initialize serial and wait for port to open:
   Serial.begin(9600);
-  pinMode(5, OUTPUT);
+  pinMode(LED, OUTPUT);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
@@ -111,19 +113,19 @@ void loop() {
       Serial.print((char)mqttClient.read());
     }
     Serial.println();
-    digitalWrite(5, HIGH);
+    digitalWrite(LED, HIGH);
     delay(200);
-    digitalWrite(5, LOW);
-    delay(200);
-
-    digitalWrite(5, HIGH);
-    delay(200);
-    digitalWrite(5, LOW);
+    digitalWrite(LED, LOW);
     delay(200);
 
-    digitalWrite(5, HIGH);
+    digitalWrite(LED, HIGH);
     delay(200);
-    digitalWrite(5, LOW);
+    digitalWrite(LED, LOW);
+    delay(200);
+
+    digitalWrite(LED, HIGH);
+    delay(200);
+    digitalWrite(LED, LOW);
     delay(2000);
 
 
