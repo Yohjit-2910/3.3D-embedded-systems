@@ -133,27 +133,8 @@ void loop() {
 
     if (distance < 30)
     {
-//      digitalWrite(5, HIGH);
-//      delay(200);
-//      digitalWrite(5, LOW);
-//      delay(200);
-//
-//      digitalWrite(5, HIGH);
-//      delay(200);
-//      digitalWrite(5, LOW);
-//      delay(200);
-//
-//      digitalWrite(5, HIGH);
-//      delay(200);
-//      digitalWrite(5, LOW);
-//      delay(2000);
 
       mqttClient.beginMessage(topic);
-      //    mqttClient.print("Distance: ");
-      //    mqttClient.print(distance);
-      //    mqttClient.print(" cm _");
-      //    //mqttClient.print("hello ");
-
       mqttClient.print("Yohjit Chopra and Ishaan Gupta _ wave detected _ ");
       mqttClient.print(distance);
       mqttClient.print(" cm  _ ");
